@@ -1,0 +1,140 @@
+<h1 id="prettyembed-js">PrettyEmbed.js</h1>
+<p>Prettier embeds for your YouTubes - with nice options like high-res preview images, advanced customization of embed options, and optional <a href="http://fitvidsjs.com" title="FitVids">FitVids</a> support.</p>
+<p><a href="https://github.com/mike-zarandona/prettyembed.js">PrettyEmbed.js on GitHub</a></p>
+<p><a href="http://codepen.io/mike-zarandona/full/FELxi/">PrettyEmbed.js Demo on CodePen</a></p>
+<h3 id="features">Features</h3>
+<ul>
+<li>Choose from one of eight thumbnail sizes</li>
+<li>Implement programmatically or via HTML5 <code>data-</code> attributes</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="requirements">Requirements</h3>
+<ul>
+<li><a href="http://jquery.com/">jQuery</a></li>
+<li><a href="https://github.com/alexanderdickson/waitForImages">waitForImages</a></li>
+</ul>
+<p>There are two methods of implementing PrettyEmbed.js - an HTML5 driven method, and a script driven method.</p>
+<ol>
+<li>Include jQuery</li>
+<li>Include waitForImages</li>
+<li>On the <code>document.ready()</code> event, call the plugin</li>
+</ol>
+<h3 id="html5-driven-application">HTML5 Driven Application</h3>
+<p>Form embeds by attaching the class of <code>.pretty-embed</code>, as well as any other required <code>data-pe-</code> options.</p>
+<pre><code>&lt;div class=&quot;pretty-embed&quot; data-pe-videoid=&quot;aBcDeFg12345&quot; data-pe-fitvids=&quot;true&quot;&gt;&lt;/div&gt;
+</code></pre><p>Call the plugin</p>
+<pre><code>$().prettyEmbed({ useFitVids: true });
+</code></pre><h3 id="script-driven">Script Driven</h3>
+<p>Create an HTML placeholder, such as this:</p>
+<pre><code>&lt;div id=&quot;my-video-display&quot;&gt;&lt;/div&gt;
+</code></pre><p>Call the plugin on the placeholder element:</p>
+<pre><code>$(&#39;#my-video-display&#39;).prettyEmbed({
+    videoID: &#39;aBcDeFg12345&#39;,
+    previewSize: &#39;hd&#39;,                // use either this option...
+    customPreviewImage: &#39;&#39;,            // ...or this option
+
+    // Embed controls
+    showInfo: false,
+    showControls: true,
+    loop: false,
+
+    colorScheme: &#39;dark&#39;,
+    showRelated: false,
+
+    useFitVids: true
+});
+</code></pre><p><strong>Note</strong> that html5 <code>data-pe-</code> attributes will take precedence over the options called programmatically.  E.g. <code>data-pe-videoid=&quot;aBcDeFg1234&quot;</code> takes precedence over <code>options.videoID: &#39;1234GfEdCbA&#39;</code>.</p>
+<p><strong>Also Note</strong> that if a particular preview image size is loading a generic gray &quot;three dots&quot; image, YouTube might not have generated a thumbnail in this size.  Try a different size.</p>
+<h2 id="options">Options</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>videoID</strong></td>
+<td>The video ID of the YouTube video.  This option will be ignored if the <code>data-videoid</code> attribute is present.  (E.g.: <em>aBcDeFg12345</em>)</td>
+</tr>
+<tr>
+<td><strong>previewSize</strong></td>
+<td>Preview image size pulled from YouTube.  This option will be ignored if the <code>customPreviewImage</code> attribute is present.  Available sizes from smallest to largest: <code>thumb-default</code>, <code>thumb-1</code>, <code>thumb-2</code>, <code>thumb-3</code>, <code>default</code>, <code>medium</code>, <code>high</code>, <code>hd</code> <em>(default)</em></td>
+</tr>
+<tr>
+<td><strong>customPreviewImage</strong></td>
+<td>Custom defined preview image URL. This option overrides <code>options.previewSize</code>.</td>
+</tr>
+<tr>
+<td><strong>showInfo</strong></td>
+<td>Display video information (top bar).</td>
+</tr>
+<tr>
+<td><strong>showControls</strong></td>
+<td>Display YouTube player controls.</td>
+</tr>
+<tr>
+<td><strong>loop</strong></td>
+<td>Play video as a loop.</td>
+</tr>
+<tr>
+<td><strong>closedCaptions</strong></td>
+<td>Displays closed captions (if available).</td>
+</tr>
+<tr>
+<td><strong>localization</strong></td>
+<td>Changes the localization.  Accepts an <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php">ISO 639-1 two-letter language code</a>.</td>
+</tr>
+<tr>
+<td><strong>colorScheme</strong></td>
+<td>Display YouTube player user interface.</td>
+</tr>
+<tr>
+<td><strong>showRelated</strong></td>
+<td>Display YouTube related videos on video end.</td>
+</tr>
+<tr>
+<td><strong>allowFullScreen</strong></td>
+<td>Defaults to <code>true</code>, can be set to <code>false</code> to disable the viewer from viewing in fullscreen mode.</td>
+</tr>
+<tr>
+<td><strong>useFitVids</strong></td>
+<td>Call FitVids.js on <code>.pretty-embed</code> instances once the video(s) is/are loaded.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="changelog">Changelog</h2>
+<h3 id="v1-2-1">v1.2.1</h3>
+<ul>
+<li>Fixed mobile player bug</li>
+<li>New option: <code>allowFullScreen</code> which can be used to turn off fullscreen viewing mode</li>
+</ul>
+<h3 id="v1-2-0">v1.2.0</h3>
+<ul>
+<li>Fixed those annoying &quot;black bars&quot; that would show up on the sides of the video once playing</li>
+<li>Fixed an issue which would cause HTML5 <code>data-pe-</code> attributes to break</li>
+<li>Removed the background-color from <code>.pretty-embed</code>, because be more flexible, ya know?</li>
+<li>New option: <code>closedCaptions</code> to turn on closed captions (if available)</li>
+<li>New option: <code>localization</code> which accepts an <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php">ISO 639-1 two-letter language code</a></li>
+</ul>
+<h3 id="v1-1-0">v1.1.0</h3>
+<ul>
+<li>Better multiple instance handling</li>
+<li>Fixed duplicate appended styles on multiple instances</li>
+<li>Better handling of mobile - this means that placeholders are not custom on mobile since YouTube does not allow for <code>autoplay=1</code> on mobile devices (boooo)</li>
+<li>Added option to choose preview image size pulled from YouTube</li>
+<li>Removed use of deprecated <code>.selector</code> property, which allowed for further minification and a cleaner application of the embedded CSS</li>
+<li>Fixed ugly default border on YouTube embeds</li>
+<li>Improved documentation</li>
+</ul>
+<h3 id="v1-0-0">v1.0.0</h3>
+<ul>
+<li>Initial Release</li>
+</ul>
+<h2 id="thanks">Thanks</h2>
+<p>Thanks to the contributors and suggestions from around the web.</p>
+<p>Thanks to alexanderdickson for <a href="https://github.com/alexanderdickson/waitForImages">waitForImages</a>, which this plugin leverages for dynamic image previews.</p>
+<h2 id="author">Author</h2>
+<p><a href="http://mike.zarandona.com">Mike Zarandona</a> | <a href="http://twitter.com/mikezarandona">@mikezarandona</a></p>
+<p><img src="http://i.imgur.com/Jne5lN3.jpg" alt="PrettyEmbed.js"></p>

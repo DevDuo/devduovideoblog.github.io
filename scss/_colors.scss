@@ -1,0 +1,95 @@
+// These are variables that can be used in the _custom.scss style sheet. example: "div {background-color: $primary-color;}"
+
+// These are variables that can be used in the _custom.scss style sheet. example: "div {background-color: $primary-color;}"
+@charset "UTF-8";
+$white: 		#fff;
+$black: 		scale-color($white, $lightness: -92%);
+$transparent: 	rgba(0,0,0,0);
+
+
+$brand1: 		#a90641; //#0CB0BE
+$brand2: 		#FDD301;
+$brand3: 		#F05B42;
+$brand4: 		#F79421;
+$brand5: 		#8EC03E;
+$brand6: 		#F15A24;
+$brand7: 		#EC1E30;
+$brand8: 		#D61D4A;
+$brand9: 		#ED0A81;
+$brand10: 		#D6138B;
+$brand11: 		#AB238C;
+$brand12: 		#06BBD6;
+$brand13: 		#192B61;
+
+$gray0: 		scale-color($white, $lightness: -85%);
+$gray1: 		scale-color($white, $lightness: -75%);
+$gray2: 		scale-color($white, $lightness: -65%);
+$gray3: 		scale-color($white, $lightness: -55%);
+$gray4: 		scale-color($white, $lightness: -45%);
+$gray5: 		scale-color($white, $lightness: -35%);
+$gray6: 		scale-color($white, $lightness: -25%);
+$gray7: 		scale-color($white, $lightness: -15%);
+$gray8:			scale-color($white, $lightness: -10%);
+$gray9:			scale-color($white, $lightness: -05%);
+$gray10:		scale-color($white, $lightness: -02%);
+
+
+// these are classes that can be used in the html that have the colors specified in the variables above.
+.white 			{ background-color: $white;}
+.black 			{ background-color: $black;}
+.transparent 	{ background-color: $transparent;}
+
+.brand1 		{ background-color: $brand1;}
+.brand2 		{ background-color: $brand2;}
+.brand3 		{ background-color: $brand3;}
+.brand4 		{ background-color: $brand4;}
+.brand5 		{ background-color: $brand5;}
+.brand6 		{ background-color: $brand6;}
+.brand7 		{ background-color: $brand7;}
+.brand8 		{ background-color: $brand8;}
+.brand9 		{ background-color: $brand9;}
+.brand10		{ background-color: $brand10;}
+.brand11		{ background-color: $brand11;}
+.brand12		{ background-color: $brand12;}
+.brand13		{ background-color: $brand13;}
+
+.gray0 			{ background-color: $gray0;}
+.gray1 			{ background-color: $gray1;}
+.gray2 			{ background-color: $gray2;}
+.gray3 			{ background-color: $gray3;}
+.gray4 			{ background-color: $gray4;}
+.gray5 			{ background-color: $gray5;}
+.gray6 			{ background-color: $gray6;}
+.gray7 			{ background-color: $gray7;}
+.gray8 			{ background-color: $gray8;}
+.gray9 			{ background-color: $gray9;}
+.gray10 		{ background-color: $gray10;}
+
+
+
+.text-white 	{ color: $white;}
+.text-black 	{ color: $black;}
+
+
+.text-brand1 	{ color: $brand1;}
+.text-brand2 	{ color: $brand2;}
+.text-brand3 	{ color: $brand3;}
+.text-brand4 	{ color: $brand4;}
+.text-brand5 	{ color: $brand5;}
+.text-brand6 	{ color: $brand6;}
+.text-brand7 	{ color: $brand7;}
+.text-brand8 	{ color: $brand8;}
+.text-brand9 	{ color: $brand9;}
+.text-brand10 	{ color: $brand10;}
+.text-brand11 	{ color: $brand11;}
+.text-brand12 	{ color: $brand12;}
+.text-brand13 	{ color: $brand13;}
+
+.text-gray0 	{ color: $gray0;}
+.text-gray1 	{ color: $gray1;}
+.text-gray2 	{ color: $gray2;}
+.text-gray3 	{ color: $gray3;}
+.text-gray4 	{ color: $gray4;}
+.text-gray5 	{ color: $gray5;}
+.text-gray6 	{ color: $gray6;}
+.text-gray7 	{ color: $gray7;}

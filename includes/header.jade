@@ -1,0 +1,72 @@
+#header.row
+	// Logo images on header
+	.small-12.medium-5.columns
+		a(href="index.html")
+			img.small-10.small-centered.columns.logo-small.show-for-small-only(src="../../img/Logo.svg", alt="Logo")
+			img.medium.small-centered.hide-for-small-only(src="../../img/Logo.svg", alt="Logo")
+	// Icon set on header
+	.medium-7.hide-for-small-only.columns
+		ul.inline-list.right.icon-list
+			li
+				a(href="tel:7138880070")
+					img(src="../../img/icons/Icon-Gray_Phone.svg")
+			li
+				a(href="mailto:joey@houstonglooringone.com")
+					img(src="../../img/icons/Icon-Gray_Mail.svg")
+			li
+				a(href="#" data-reveal-id="map")
+					img(src="../../img/icons/Icon-Gray_Map.svg")
+					#map.reveal-modal(data-reveal)
+						<iframe class="small-12 large-9 columns" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3466.99992653085!2d-95.6428325!3d29.661776500000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640e0b39590330f%3A0xa368592977c5d348!2s10581+TX-6+%23107%2C+Sugar+Land%2C+TX+77498!5e0!3m2!1sen!2sus!4v1421619436857" frameborder="0" style="border:0"></iframe>
+						address.large-3.small-12.columns
+							a Houston Flooring One
+							p 10581 Highway 6<br>South Suite 107<br> Sugar Land, Texas 77498<br>USA</address>
+			li
+				a(href="https://www.facebook.com/Yourhoustonflooringstore")
+					img(src="../../img/icons/Icon-Gray_Facebook.svg")
+			li
+				a(href="https://plus.google.com/+FloorHouHouston/about?gl=us&hl=en")
+					img(src="../../img/icons/Icon-Gray_G%2B.svg")
+			li
+				a(href="")
+					img(src="../../img/icons/Icon-Gray_Twitter.svg")
+			li
+				a(href="")
+					img(src="../../img/icons/Icon-Gray_Youtube.svg")
+			li
+				a(href="")
+					img(src="../../img/icons/Icon-Gray_In.svg")
+.row
+	// Navigation
+	nav.top-bar(data-topbar='', role="navigation")
+		ul.title-area
+			li.name
+				// h1
+				// a(href="#")
+			li.toggle-topbar.menu-icon
+				a(href="#")
+					span Menu
+		section.top-bar-section
+			ul.left
+				li.active
+					a(href="/index.html") Home
+				li.has-dropdown
+					a(href="/Hardwood.html") Hardwood
+					ul.dropdown
+						li
+							a(href="/Hardwood.html") Hardwood 1
+						li
+							a(href="/hardwood2.html") Hardwood 2
+				li
+					a(href="/laminate.html") Laminate
+				li
+					a(href="/vinyl.html") Vinyl
+				li
+					a(href="/cabinets.html") Cabinets
+				li
+					a(href="/showers.html") Showers
+				li
+					a(href="/adhesives.html") Adhesives
+				li
+					a(href="/underlayment.html") Underlayment
+

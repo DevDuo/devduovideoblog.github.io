@@ -1,0 +1,332 @@
+doctype html
+
+// IN JADE YOU USE ALL HTML TAGS WITH NO "< >" SYMBOLS ALL HTML TAGS ARE USED WITHOUT SYMBOLS; HTML, DIV, BODY, META,
+// CHILD ELEMENTS ARE SPECIFIED THROUGH INDENTATION. RATHER THAN PUTTING THEM INSIDE OPENING AND CLOSING TAG OF THE PARENT ELEMENT.
+// FOR EXAMPLE, HEAD IS INSIDE HTML BECAUSE IT'S IDENTED ONE LEVEL FURTHER. IT WOULD BE A SIBLING OF HTML IF IT WAS ON THE SAME LEVEL.
+// META, TITLE, LINK, SCRIPT ARE ALL INSIDE HEAD. & BODY IS A SIBLING OF HEAD.
+// ALL data that is normall found inside after a tag is added with (). example: <link rel="stylesheet"> would look like "link(rel="stylesheet),
+// THE "INCLUDES" are simply the same content placed in a separate jade sheet to keep this page simpler.
+
+html.no-js(lang='en')
+	head
+		title Double Donation Event
+		meta(charset='utf-8')
+		// if you remove this meta tag, the NSA will spy on you through your Xbox Kinect camera
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		script(type='text/javascript' src='js/modernizr.js')
+		link(rel='stylesheet', href='css/app.css')
+		// Icon
+		link(rel='icon' type='image/png' href='img/favicon.ico')
+		// Font Awesome
+		link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
+		// OwlCarousel
+		link(rel='stylesheet', href='plugins/owlcarousel/assets/owl.carousel.min.css')
+		link(rel='stylesheet', href='plugins/owlcarousel/assets/owl.theme.default.min.css')
+
+		// Scrollpane
+		link(type="text/css" href="/js/jscrollpane/jquery.jscrollpane.css" rel="stylesheet" media="all")
+		script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+		script(type="text/javascript" src="/plugins/jscrollpane/scripts/jquery.jscrollpane.min.js")
+		script(type="text/javascript" src="/plugins/jscrollpane/scripts/jquery.mousewheel.js")
+		script(type="text/javascript" src="/plugins/jscrollpane/scripts/mwheelIntent.js")
+
+		script(src="/js/core.js")
+
+		//The UA-xxxxxxxxx-15 needs to be replaced for the proper google analytics id.
+		script.
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-xxxxxxxxx-15', 'auto');
+			ga('send', 'pageview');
+			$(function()
+			{
+				$('.scroll-pane').jScrollPane();
+			});
+	body.gray8
+		.off-canvas-wrap(data-offcanvas='')
+			.inner-wrap
+				a.left-off-canvas-toggle(href='#').show-for-medium-down.off-canvas-button
+					.fa.fa-bars	MENU
+				// Off Canvas Menu
+				aside.left-off-canvas-menu.off-canvas-nav
+					// whatever you want goes here
+					ul.off-canvas-list
+						li
+							a(href='#') Item 1
+						li
+							a(href='#') Item 2
+						li
+							a(href='#') Item 3
+						li
+							a(href='#') Item 4
+						li
+							a(href='#').sub Sub item
+						li
+							a(href='#') Item 6
+						li
+					ul.social-icons.small-block-grid-3
+						li
+							a(href="#").fa.fa-twitter
+						li
+							a(href="#").fa.fa-facebook
+						li
+							a(href="#").fa.fa-youtube-play
+				// main content goes here
+				.header
+					.nav.white
+						.row
+							.logocontainer.small-4.small-centered.medium-4.medium-uncentered.columns
+								img(src="img/DevDuo-full.png").logo.small-12
+							.small-10.medium-6.show-for-medium-up.columns
+								ul.inline-list.text-center.right
+									li.hide-for-small-only
+										h2.nav-link
+											a(href='#').active Videos
+									li.hide-for-small-only.active
+										h2.nav-link
+											a(href='#') Blog
+									li.hide-for-small-only
+										h2.nav-link
+											a(href='#') Nosotros
+									li.hide-for-small-only
+										h2.nav-link
+											a(href='#') Recursos
+					.row.small-collapse.content.white
+						.row.small-collapse.brand1
+							// Carrousel
+								.owl-carousel.white
+									.item
+										img(src="img/carousel/slide1.png")
+									.item
+										img(src="img/carousel/slide1.png")
+									.item
+										img(src="img/carousel/slide1.png")
+									.item
+										img(src="img/carousel/slide1.png")
+						.row.page-header
+							.small-10.columns.small-centered
+								h2 Videos
+						.row
+							.small-10.columns.small-centered
+								ul.small-block-grid-1.medium-block-grid-2.videos
+									li.video-card
+										a(href-"#")
+											
+											.info
+												h3.title Centrando con CSS
+											.small-12
+												img(src="/img/thumbs/thumbnail-01.jpg")
+											.info-bottom.border-html
+												h3.tag #HTML
+												p This is the subtitle of the video
+									li.video-card
+										a(href-"#")
+											.info
+												h3.title Utilizando Clases
+											.small-12
+												img(src="/img/thumbs/thumbnail-02.jpg")
+											.info-bottom.border-html
+												h3.tag #HTML
+												p This is the subtitle of the video
+									li.video-card
+										a(href-"#")
+											.info
+												h3.title This is the title
+											.small-12
+												img(src="/img/thumbs/thumbnail-03.jpg")
+											.info-bottom.border-html
+												h3.tag #HTML
+												p This is the subtitle of the video
+									li.video-card
+										a(href-"#")
+											.info
+												h3.title This is the title
+											.small-12
+												img(src="/img/thumbs/thumbnail-02.jpg")
+											.info-bottom.border-css
+												h3.tag #CSS
+												p This is the subtitle of the video
+									li.video-card
+										a(href-"#")
+											.info
+												h3.title This is the title
+											.small-12
+												img(src="/img/thumbs/thumbnail-05.jpg")
+											.info-bottom.border-css
+												h3.tag #CSS
+												p This is the subtitle of the video
+									li.video-card
+										a(href-"#")
+											.info
+												h3.title This is the title
+											.small-12
+												img(src="/img/thumbs/thumbnail-06.jpg")
+											.info-bottom.border-css
+												h3.tag #CSS
+												p This is the subtitle of the video
+									li.video-card
+										a(href-"#")
+											.info
+												h3.title This is the title
+											.small-12
+												img(src="/img/thumbs/thumbnail-07.jpg")
+											.info-bottom.border-sass
+												h3.tag #SASS
+												p This is the subtitle of the video
+									li.video-card
+										a(href-"#")
+											.info
+												h3.title This is the title
+											.small-12
+												img(src="/img/thumbs/thumbnail-08.jpg")
+											.info-bottom.border-sass
+												h3.tag #SASS
+												p This is the subtitle of the video
+									li.video-card
+										a(href-"#")
+											.info
+												h3.title This is the title
+											.small-12
+												img(src="/img/thumbs/thumbnail-09.jpg")
+											.info-bottom.border-sass
+												h3.tag #SASS
+												p This is the subtitle of the video
+									li.video-card
+										a(href-"#")
+											.info
+												h3.title This is the title
+											.small-12
+												img(src="/img/thumbs/thumbnail-10.jpg")
+											.info-bottom.border-zf
+												h3.tag #foundation
+												p This is the subtitle of the video
+									li.video-card
+										a(href-"#")
+											.info
+												h3.title This is the title
+											.small-12
+												img(src="/img/thumbs/thumbnail-11.jpg")
+											.info-bottom.border-zf
+												h3.tag #foundation
+												p This is the subtitle of the video
+									li.video-card
+										a(href-"#")
+											.info
+												h3.title This is the title
+											.small-12
+												img(src="/img/thumbs/thumbnail-12.jpg")
+											.info-bottom.border-tb
+												h3.tag #bootstrap
+												p This is the subtitle of the video
+								.pagination-section
+									.pagination-centered
+										ul.pagination
+											li.arrow.unavailable
+												a(href='') «
+											li.current
+												a(href='') 1
+											li
+												a(href='') 2
+											li
+												a(href='') 3
+											li
+												a(href='') 4
+											li.unavailable
+												a(href='') …
+											li
+												a(href='') 12
+											li
+												a(href='') 13
+											li.arrow
+												a(href='') »
+
+
+					.small-12.footer.gray9
+
+						//go to footer.jade file to edit content in the body.
+						.row
+							.medium-12.columns.footer-links
+								img(src="../../img/logoGray.svg").hide-for-small-only.footer-logo.columns.small-1
+								ul.inline-list.right.social-icons
+									li
+										a(href="tel:7138880070").fa.fa-phone
+									li
+										a(href="mailto:joey@houstonglooringone.com").fa.fa-globe
+									li
+										a(href="." data-reveal-id="map").fa.fa-map
+									li
+										a(href="").fa.fa-facebook
+									li
+										a(href="").fa.fa-twitter-square
+									li
+										a(href="").fa.fa-youtube-play
+									li
+										a(href="").fa.fa-google-plus-square
+
+
+
+				// close the off-canvas menu
+				a.exit-off-canvas
+
+		footer
+			// These are the scripts needed to run all basic plugins for our sites.
+		script(type='text/javascript' src="/js/jquery.js")
+		script(type='text/javascript' src="/js/foundation.min.js")
+		script(type='text/javascript' src="/js/fastclick.min.js")
+		script(src='plugins/owlcarousel/owl.carousel.js')
+		script.
+			//This activates foundations Javascripts
+			$(document).foundation({
+				tab: {
+					callback : function (tab) {
+						console.log(tab);
+					}
+				}
+			});
+
+			//This enables the FastClick javascript which is necessary for Owlcarousel
+			window.addEventListener('load', function() {
+				new FastClick(document.body);
+			}, false);
+
+			// run foundation.js function
+			$(document).foundation();
+			$('a[href^="#bottom"], a[href^="#top"]').on('click', function(event) {
+
+					var target = $( $(this).attr('href') );
+
+					if( target.length ) {
+							event.preventDefault();
+							$('html, body').animate({
+									scrollTop: target.offset().top
+							}, 1000);
+					}
+
+			});
+			// Main Owl Carousel Settings
+				$(document).ready(function(){
+					$(".owl-carousel").owlCarousel();
+				});
+
+				$('.owl-carousel').owlCarousel({
+					loop: true,
+					margin:0,
+					nav:false,
+					dots: true,
+					autoplay: true,
+					autoplayTimeout: 3000,
+					autoplaySpeed: 4500,
+					responsive:{
+						0:{
+							items:1
+						},
+						600:{
+							items:1
+						},
+						1000:{
+							items:1
+						}
+					}
+				})
